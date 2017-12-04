@@ -1,0 +1,64 @@
+﻿@model Entities.deposito
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DepositoModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_deposito)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_deposito)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.banco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.banco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.num_convenio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.num_convenio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.referencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.referencia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

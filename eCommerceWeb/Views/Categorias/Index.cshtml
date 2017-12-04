@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Entities.categoria>
+
+@{
+    ViewBag.Title = "Lista de Categorías";
+}
+
+<h2>Lista de Categorías</h2>
+@Html.ActionLink("Nuevo", "Create", "Categorias", htmlAttributes: new { @class = "btn btn-primary" })
+
+<div class="box-body">
+    <table id="example2" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>CATEGORÍA</th>
+                <th>ACCIONES</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nombre_categoria)
+                    </td>
+                    <td>
+                        @Html.ActionLink("'", "Edit", new { id = item.id_categoria }, htmlAttributes: new { @class = "fa fa-pencil-square" }) |
+                        @Html.ActionLink("'", "Details", new { id = item.id_categoria }, htmlAttributes: new { @class = "fa fa-eye" }) |
+                        @Html.ActionLink("'", "Delete", new { id = item.id_categoria }, htmlAttributes: new { @class = "fa fa-trash" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

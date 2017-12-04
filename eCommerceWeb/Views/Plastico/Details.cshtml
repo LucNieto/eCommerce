@@ -1,0 +1,68 @@
+﻿@model Entities.plastico
+
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PlasticoModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_tarjeta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_tarjeta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proveedor_tarjeta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proveedor_tarjeta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre_titular)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_titular)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numero_tarjeta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numero_tarjeta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mes_exp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mes_exp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ano_exp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ano_exp)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

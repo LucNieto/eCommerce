@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Entities.plastico>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_tarjeta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_tarjeta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.proveedor_tarjeta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_titular)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numero_tarjeta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mes_exp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ano_exp)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_tarjeta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_tarjeta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.proveedor_tarjeta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_titular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numero_tarjeta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mes_exp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ano_exp)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.id_tarjeta }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.id_tarjeta }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.id_tarjeta })
+        </td>
+    </tr>
+}
+
+</table>

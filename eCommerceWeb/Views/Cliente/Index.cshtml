@@ -1,0 +1,99 @@
+﻿@model IEnumerable<Entities.cliente>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_cliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_completo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ape_pat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ape_mat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_int)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.num_ext)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.calle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.colonia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ciudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pais)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.codigo_postal)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_cliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_completo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ape_pat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ape_mat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_int)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.num_ext)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.calle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.colonia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ciudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.codigo_postal)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

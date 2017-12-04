@@ -1,0 +1,38 @@
+﻿@model Entities.categoria
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles</h2>
+
+<div>
+    <h4>Categorías</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_categoria)
+        </dd>
+
+        <dt>
+            CATEGORÍA
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre_categoria)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new {  id = Model.id_categoria}) |
+    @Html.ActionLink("Volver", "Index")
+</p>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

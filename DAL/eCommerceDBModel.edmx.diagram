@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c9329f16e223487b8759ece89c4bece2" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="eCommerceModel.categoria" Width="1.5" PointX="3" PointY="11.625" />
+        <EntityTypeShape EntityType="eCommerceModel.cliente" Width="1.5" PointX="3" PointY="6.75" />
+        <EntityTypeShape EntityType="eCommerceModel.deposito" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="eCommerceModel.factura" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="eCommerceModel.pago" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="eCommerceModel.plastico" Width="1.5" PointX="0.75" PointY="8.25" />
+        <EntityTypeShape EntityType="eCommerceModel.producto" Width="1.5" PointX="5.25" PointY="11.125" />
+        <EntityTypeShape EntityType="eCommerceModel.producto_proveedor" Width="1.5" PointX="7.5" PointY="11.25" />
+        <EntityTypeShape EntityType="eCommerceModel.proveedor" Width="1.5" PointX="5.25" PointY="7.5" />
+        <EntityTypeShape EntityType="eCommerceModel.venta" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="eCommerceModel.venta_producto" Width="1.5" PointX="7.5" PointY="1.125" />
+        <AssociationConnector Association="eCommerceModel.FK_producto_categoria" />
+        <AssociationConnector Association="eCommerceModel.FK_venta_cliente" />
+        <AssociationConnector Association="eCommerceModel.FK_pago_deposito" />
+        <AssociationConnector Association="eCommerceModel.FK_pago_factura" />
+        <AssociationConnector Association="eCommerceModel.FK_pago_plastico" />
+        <AssociationConnector Association="eCommerceModel.FK_venta_pago" />
+        <AssociationConnector Association="eCommerceModel.FK_producto_proveedor_producto" />
+        <AssociationConnector Association="eCommerceModel.FK_venta_producto_producto" />
+        <AssociationConnector Association="eCommerceModel.FK_producto_proveedor_proveedor" />
+        <AssociationConnector Association="eCommerceModel.FK_venta_producto_venta" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
